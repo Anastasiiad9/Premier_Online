@@ -33,7 +33,7 @@ async login(email: string, password: string) {
 async checkSignInEmailField() {
     await expect(this.signInEmailField).toBeVisible();
     await expect(this.signInEmailField).toBeEnabled();
-    await this.signInEmailField.fill('pollyh18567@gmail.com');
+    await this.signInEmailField.fill('pollyh185678@gmail.com');
 }
 async checkSignInPasswordField() {
     await expect(this.signInPasswordField).toBeVisible();
