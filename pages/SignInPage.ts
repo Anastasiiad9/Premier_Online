@@ -1,9 +1,11 @@
 import { expect, Locator, Page} from "@playwright/test";
 import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
 import { RegistrationPage } from "./RegistrationPage";
 export class SignInPage {
 readonly page: Page;
 readonly header: Header;
+readonly footer: Footer;
 readonly signInEmailField: Locator;
 readonly signInPasswordField: Locator;
 readonly signInButton: Locator;
@@ -15,6 +17,7 @@ readonly registrationPage: RegistrationPage;
 constructor(page: Page) {
     this.page = page;
     this.header = new Header(page);
+    this.footer = new Footer(page);
     this.signInEmailField = page.locator('.uk-input').first();
     this.signInPasswordField = page.locator('.uk-input').last();
     this.signInButton = page.locator('.uk-button.uk-button-primary.uk-width-1-1');
